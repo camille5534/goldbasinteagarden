@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // function declaration 函式宣告式 (提升性)
+        function test(){
+            let a = 23;
+            return a*a;
+        }
+       
+        function total(price,tax){
+            return price * tax;
+        }
+
+        function usToNt(price,ex){
+            return price * ex;
+        }
+
+        console.log(usToNt(100,32));
+
+        // function expression 函式表達式
+        let go = function(){
+            return 'go';
+        }
+
+        // arrow function 箭頭函式
+        // this
+        
+        // let q = ()=>{
+        //     return 'q';
+        // }
+
+        // let q = (x)=>{
+        //     return x;
+        // }
+        // let q = x =>{
+        //     return x;
+        // }
+        // let q = x => x;
+
+        // let q = x => x+10;
+
+        // let q = (x) => {return x+10;}
+
+        // let q = function(x){
+        //     return x+10;
+        // }
+
+        let q = () => ({
+            a:'123'
+        })
+        
+        console.log(q());
+
+    </script>
+</body>
+</html>

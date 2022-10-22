@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>
+            {{desc}}
+        </p>
+        <div>
+            {{number}}
+        </div>
+        <div>
+            <div v-for="data of products">
+                <h2>
+                    {{data.name}} : {{data.price}}
+                </h2>
+            </div>
+        </div>
+        <div v-if="qty > 10">1庫存充足</div>
+        <div v-else-if="qty > 0">即將完售</div>
+        <div v-else>1補貨中</div>
+
+
+        <div v-show="qty > 10">2庫存充足</div>
+        <div v-show="qty == 0">2補貨中</div>
+        <img v-bind:src="cover" alt="">
+        <img :src="cover" alt="">
+        <a :href="link">Yahoo</a>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    title: 'hello Vue!',
+                    desc: 'lorem ipsum sdf fwef ',
+                    number: 123,
+                    qty: 0,
+                    cover: 'https://picsum.photos/id/98/800/600',
+                    link: 'https://tw.yahoo.com',
+                    products:[
+                        {
+                            id:1,
+                            name:'apple',
+                            price: 20
+                        },{
+                            id:2,
+                            name:'orange',
+                            price:33
+                        }
+                    ]
+                }
+            },
+        }).mount('#app');
+
+    </script>
+</body>
+</html>

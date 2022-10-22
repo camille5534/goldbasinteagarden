@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+
+            /* animation:move 3000ms; */
+
+            animation-name: go;
+            animation-duration: 10000ms;
+            /* animation-delay: 500ms; */
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            /* normal, reverse, alternate, alternate-reverse*/
+            animation-timing-function: steps(10,end);
+            /* animation: move 1000ms 200ms infinite forwards alternate linear; */
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            /* to {} */
+        }
+        @keyframes move {
+            to {
+                transform: translateX(600px);
+            }
+        }
+        @keyframes go {
+            0% {transform: translate(0)rotate(0);}
+            25% {transform: translate(600px,0)rotate(90deg);}
+            50% {transform: translate(600px,600px)rotate(180deg);}
+            75% {transform: translate(0,600px)rotate(270deg);}
+            100% {transform: translate(0)rotate(360deg);}
+        }
+        h1:hover {
+            animation:flash 600ms infinite ;
+        }
+        @keyframes flash {
+            0% {
+                opacity: 1;
+                letter-spacing: normal;
+            }
+            50% {
+                opacity: 0;
+                letter-spacing: 2px;
+            }
+            100% {
+                opacity: 1;
+                letter-spacing: normal;
+            }
+        }
+        /* 點擊:只有可點選的元素可使用，例如a、button */
+        a:focus {
+            animation: flash 600ms infinite;
+            /* background-color: #098; */
+        }
+        button:focus {
+            animation: flash 600ms infinite;
+            /* background-color: #098; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <h1>title</h1>
+    <a href="#">click</a>
+    <button>click</button>
+</body>
+</html>

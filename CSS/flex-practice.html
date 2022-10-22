@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI';
+        }
+        img {
+            width: 100%;
+            /* display: block; */
+            vertical-align: top;
+        }
+        .container {
+            width: 1200px;
+            margin-inline:auto;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .box {
+            width: calc(100% / 3);
+            padding: 15px;
+        }
+        .card-cover {
+            /* width: 400px; */
+            /* height: 400px; */
+            aspect-ratio: 1 / 1;
+            background-color: #fa0;
+        }
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card {
+            border-radius: 6px;
+            box-shadow: 0px 4px 10px 0px rgb(0 0 0 / .2);
+            overflow: hidden;
+        }
+        .card-title {
+            display: flex;
+            align-items: center;
+        }
+        .card-no {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ffd858;
+        }
+        .card-title h3 {
+            color: #00374d;
+            line-height: 1.2rem;
+            font-size: 1.5rem;
+            padding-top: 11px;
+            margin-left: 20px
+        }
+        .card-title small {
+            font-size: 14px;
+            color: #aaa;
+            font-weight: normal;
+        }
+        .card-body {
+            padding-inline: 13px;
+            padding-block-start: 20px;
+            padding-block-end: 40px;
+        }
+        .card-body h4 {
+            color: #00374d;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            width: fit-content;
+            position: relative;
+        }
+        /* 虛擬元素選取器 */
+        .card-body h4::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 20px;
+            background-color: #ffeaa3;
+
+            position: absolute;
+            /* top, bottom, left, right */
+            bottom:-5px;
+            left:-2px;
+            z-index: -1;
+        }
+        .card-body ul {
+            font-size: 14px;
+            color: #777;
+            list-style-position: inside;
+            line-height: 1.5rem;
+        }
+        .card-body li::marker {
+            content: '- ';
+            color: #aaa;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/89/1200/900" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <div class="card-no">01</div>
+                        <h3>
+                            技術力
+                            <br>
+                            <small>
+                                Technical
+                            </small>
+                        </h3>
+                    </div>
+                    <h4>
+                        【為你的學習品質專業把關】
+                    </h4>
+                    <ul>
+                        <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                        <li>完成高水準作品集提升職場競爭力</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/89/1200/900" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <div class="card-no">01</div>
+                        <h3>
+                            技術力
+                            <br>
+                            <small>
+                                Technical
+                            </small>
+                        </h3>
+                    </div>
+                    <h4>
+                        【為你的學習品質專業把關】
+                    </h4>
+                    <ul>
+                        <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                        <li>完成高水準作品集提升職場競爭力</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/89/1200/900" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <div class="card-no">01</div>
+                        <h3>
+                            技術力
+                            <br>
+                            <small>
+                                Technical
+                            </small>
+                        </h3>
+                    </div>
+                    <h4>
+                        【為你的學習品質專業把關】
+                    </h4>
+                    <ul>
+                        <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                        <li>完成高水準作品集提升職場競爭力</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
