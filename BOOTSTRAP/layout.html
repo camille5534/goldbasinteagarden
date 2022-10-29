@@ -211,6 +211,7 @@
           </div>
         </div>
       </section>
+      <!-- 新增icon -->
       <section>
         <div class="container">
           <div class="row">
@@ -223,7 +224,7 @@
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. In doloremque aliquid quae provident magnam velit amet non laboriosam totam eum?
                 </p>
-                <a href="">More</a>
+                <a href="#" class="btn btn-outline-success" data-bs-target="#modal-1" data-bs-toggle="modal">More</a>
             </div>
             <div class="col-xl-4 col-sm-6 text-sm-center text-start">
               <!-- bootstrap 複製的icon -->
@@ -234,7 +235,7 @@
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. In doloremque aliquid quae provident magnam velit amet non laboriosam totam eum?
                 </p>
-                <a href="">More</a>
+                <a href="" class="btn btn-outline-success">More</a>
             </div>
             <div class="col-xl-4 col-sm-6 text-sm-center text-start">
               <!-- bootstrap 複製的icon -->
@@ -245,10 +246,61 @@
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. In doloremque aliquid quae provident magnam velit amet non laboriosam totam eum?
                 </p>
-                <a href="">More</a>
+                <a href="" class="btn btn-outline-success">More</a>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-1Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-1Label">title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, reprehenderit!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 表單 -->
+      <section style="padding-block: 100px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <form action="">
+                <!-- 表單：Name -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Name</label>
+                  <input type="text" class="form-control">
+                </div>
+                <!-- 表單：email -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="text" class="form-control">
+                </div>
+                <!-- 表單：content , textarea -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Content</label>
+                  <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
 </body>
 </html>
