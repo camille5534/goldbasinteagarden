@@ -280,9 +280,11 @@
             <div class="col-6">
               <form action="">
                 <!-- 表單：Name -->
-                <div class="mb-3">
-                  <label for="" class="form-label">Name</label>
-                  <input type="text" class="form-control">
+                <div class="row mb-3">
+                  <label for="" class="col-sm-2 col-form-label col-form-label-sm" >Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="請輸入姓名">
+                  </div>
                 </div>
                 <!-- 表單：Gender -->
                 <div class="mb-3">
@@ -301,20 +303,22 @@
                 </div>
                 <!-- 表單：checkbox -->
                 <div class="mb-3">
-                  <label for="" class="form-label">How to Know</label>
-                    <div class="form-check">
+                  <!-- d-block 轉成block -->
+                  <label for="" class="form-label d-block">How to Know</label>
+                  <!-- form-check-inline 橫向排列 -->
+                    <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
                         News
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
                         Social Media
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
                         Other
@@ -322,9 +326,10 @@
                     </div>
 
                 <!-- 表單：email -->
-                <div class="mb-3">
+                <!-- form-floating -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" placeholder="請輸入email">
                   <label for="" class="form-label">Email</label>
-                  <input type="text" class="form-control">
                 </div>             
                 <!-- 表單：select -->
                 <div class="mb-3">
@@ -337,12 +342,11 @@
                       <option value="">item 5</option>
                   </select>
                 </div>
-
                 
                 <!-- 表單：content , textarea -->
                 <div class="mb-3">
                   <label for="" class="form-label">Content</label>
-                  <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                  <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="請輸入內容"></textarea>
                 </div>
                 <!-- 提交按鈕 -->
                 <input type="submit" class="btn btn-primary">
