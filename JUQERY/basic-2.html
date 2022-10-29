@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        .active {
+            color:blue;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            $('.add').click(function(){
+                console.log('click');
+                $('p').addClass('active');
+            })
+            $('.remove').click(function(){
+                console.log('click');
+                $('p').removeClass('active');
+            })
+            $('.toggle').click(function(){
+                console.log('click');
+                $('p').toggleClass('active');
+            })
+        })
+    </script>
+
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam obcaecati ipsam atque harum consequatur! Quas reiciendis laboriosam pariatur dolorem! Provident!
+    </p>
+    
+</body>
+</html>
