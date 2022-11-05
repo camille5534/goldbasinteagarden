@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+ 
+    <style>
+        body {
+            background-color: #ffac92;
+        }
+        .slider {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .product-slider {
+            width: 1200px;
+            margin: auto;
+        }
+        .product-slider-item {
+            margin-inline: 10px;
+        }
+        .product-slider-item img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 最外層要加owl-carousel  -->
+    <div class="slider owl-carousel owl-theme">
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/800?random=1" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/800?random=2" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/800?random=3" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/800?random=4" alt="">
+        </div>
+    </div>
+
+    <div class="product-slider  owl-carousel owl-theme">
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=5" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=6" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=7" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=8" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=9" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=10" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=11" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=12" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=13" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=14" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=15" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=16" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=17" alt="">
+        </div>
+        <div class="product-slider-item">
+            <img src="https://picsum.photos/1200/800?random=18" alt="">
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.slider').owlCarousel();
+            $('.product-slider').owlCarousel();
+        })
+
+    </script>
+</body>
+</html>
