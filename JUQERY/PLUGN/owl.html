@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
- 
     <style>
         body {
             background-color: #ffac92;
@@ -23,20 +23,25 @@
         }
 
         .product-slider {
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
         }
-        .product-slider-item {
+        /* .product-slider-item {
             margin-inline: 10px;
-        }
+        } */
         .product-slider-item img {
             width: 100%;
+        }
+
+        .owl-theme .owl-nav [class*='owl-']:hover {
+            background: transparent;
+            color:#f3372a;
         }
     </style>
 
 </head>
 <body>
-    <!-- 最外層要加owl-carousel  -->
+    <!-- 最外層要加owl-carousel owl-theme  -->
     <div class="slider owl-carousel owl-theme">
         <div class="slider-item">
             <img src="https://picsum.photos/1200/800?random=1" alt="">
@@ -98,10 +103,44 @@
     </div>
     <script>
         $(function(){
-            $('.slider').owlCarousel();
-            $('.product-slider').owlCarousel();
+            $('.slider').owlCarousel({
+                // 顯示圖片
+                items: 1, 
+                autoplay: true,
+                // 開取循環輪播
+                loop: true,
+                // 左右箭頭
+                nav: true,
+                autoplayTimeout: 8000,
+                autoplaySpeed: 2000,
+                // 點點的速度要跟autoplaySpeed一致
+                dotsSpeed: 2000,
+                // 左右箭頭速度
+                navSpeed: 2000,
+                navText: ['<i class="fa-sharp fa-solid fa-arrow-left"></i>','<i class="fa-sharp fa-solid fa-arrow-right"></i>']
+            });
+            // center效果比slider好
+            $('.product-slider').owlCarousel({
+                items: 5,
+                margin: 10,
+                center: true,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                // RWD 需配合寬度改成max-width: 1200px;
+                responsive:{
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 6
+                    }
+                }
+            });
         })
-
     </script>
 </body>
 </html>
