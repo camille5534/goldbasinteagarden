@@ -4,68 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=s, initial-scale=1.0">
-    <title>Home</title>
+    <title>金盆茶園</title>
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <!-- Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <style>
+        .slick-prev:before, .slick-next:before {
+            color: #676666;
+        }
+    </style>
+    
 
 </head>
 <body>
     <!-- 選單 -->
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="https://flowbite.com/" class="flex items-center">
             <img src="./img/tealogo.jpeg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">金盆茶園</span>
         </a>
-        <button id="navbar-menu" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <button id ="navbar-menu" data-collapse-toggle="navbar-panel" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div class="hidden w-full md:block md:w-auto" id="navbar-panel">
             <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">關於我們</a>
+                <a href="#" class="block py-2 pr-4 pl-3 text-right text-gray-600 font-semibold hover:bg-orange-100 rounded">關於我們</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">商品清單</a>
+                <a href="#" class="block py-2 pr-4 pl-3 text-right text-gray-600 font-semibold hover:bg-orange-100 rounded">商品清單</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">聯絡我們</a>
+                <a href="#" class="block py-2 pr-4 pl-3 text-right text-gray-600 font-semibold hover:bg-orange-100 rounded">聯絡我們</a>
             </li>
             </ul>
         </div>
         </div>
     </nav>
+    <section class="pt-10 w-full">
+        <div class="container mx-auto">
+            <div class="slider">
+                <div class="slider-item algin-center">
+                    <img src="https://picsum.photos/1200/800?random=1" alt="" class="w-full">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/1200/800?random=2" alt="" class="w-full">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/1200/800?random=3" alt="" class="w-full">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/1200/800?random=4" alt="" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-10 mx-auto w-full">
+        <h1 class="text-center text-3xl font-bold">Gallery</h1>
+        <div class="pt-5 container flex mx-auto w-full">
+            <div class="w-full">
+                <img src="https://picsum.photos/800/800?random=5" alt="" class="w-full">
+            </div>
+            <div class="w-full">
+                <img src="https://picsum.photos/800/800?random=6" alt="" class="w-full">
+            </div>
+        </div>
+        <div class="container flex mx-auto">
+            <div class="w-full">
+                <img src="https://picsum.photos/800/800?random=7" alt="" class="w-full">
+            </div>
+            <div class="w-full">
+                <img src="https://picsum.photos/800/800?random=8" alt="" class="w-full">
+            </div>
+        </div>
+    </section>
 
-    <!-- JS -->
+    <!-- Viedo -->
+    <section class="pt-10 w-full mx-auto">
+        <div class="container flex flex-wrap w-full mx-auto">
+            <img src="https://picsum.photos/1600/800?random=9" alt="" class="w-full">
+        </div>
+    </section>
+
+    <!-- Follow us -->
+    <section class="pt-10 mx-auto ">
+        <h1 class="text-center text-5xl font-bold mx-auto">追蹤我們~!</h1>
+        <div class="container mx-auto w-full">
+            <ul class="block mx-auto flex align-center">
+                <li>
+                    <a href="#" class="py-2 px-2">Link</a>
+                </li>
+                <li>
+                    <a href="#" class="py-2 px-2">Link</a>
+                </li>
+                <li>
+                    <a href="#" class="py-2 px-2">Link</a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+
     <script>
-        const targetEl = document.getElementById('navbar-default');
-        const triggerEl = document.getElementById('navbar-menu')
+         $(function(){
+            $('.slider').slick({
+                dots: true,
+                autoplay: true,
+                arrows: true,
+                autoplayspeed: 3000,
+                speed: 3000
 
-        console.log(targetEl)
-        console.log(triggerEl)
-        const options = {
-            triggerEl: triggerEl,
-                onCollapse: () => {
-                    console.log('element has been collapsed')
-                },
-                onExpand: () => {
-                    console.log('element has been expanded')
-                },
-                onToggle: () => {
-                    console.log('element has been toggled')
-                }
-          }
-            // show the target element
-            onCollapse.expand();
-
-            // hide the target element
-            onCollapse.collapse();
-
-            // toggle the visibility of the target element
-            onCollapse.toggle();
-
+            })
+         })
     </script>
-  
-    
+      
 </body>
 </html>
