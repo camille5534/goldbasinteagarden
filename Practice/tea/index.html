@@ -8,7 +8,7 @@
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite -->
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/> -->
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
@@ -18,10 +18,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        .slick-prev:before, .slick-next:before {
-            color: #676666;
-            font-size: 30px;
+        .slick-next {
+            right: 20px;
+        }
+        .slick-prev {
+            left: 20px;
+            z-index: 2;
+        }
+        .slick-prev:before {
+            font: var(--fa-font-solid);
+            content: "\f359";
+        }
+        .slick-next:before {
+            font: var(--fa-font-solid);
+            content: "\f35a";
+        }
+        .slick-prev:before, .slick-next:before {    
+            color: #272726;
+            font-size: 35px;
+        }
+        .slick-prev:hover {
+            color: red
+        }
+        .font-noto-300 {
+            font-weight: 300;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .font-noto-400 {
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .font-noto-500 {
+            font-weight: 500;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .font-noto-700 {
+            font-weight: 700;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .home {
+            
+            background-image: url('./img/green-tea-5301025_1280.jpeg');
         }
 
     </style>
@@ -30,56 +72,68 @@
 </head>
 <body>
      <!-- 選單 -->
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    <nav class="bg-[#E5E3C9] border-gray-200 px-2 sm:px-4 py-2.5 shadow-md rounded fixed w-full z-[999]">
         <div class="container flex flex-wrap w-3/4 sm:w-5/6 justify-between items-center mx-auto">
-            <a href="#" class="flex items-center justify-start">
-                <img src="./img/tealogo.jpeg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">金盆茶園</span>
+            <a href="./index.html" class="flex items-center justify-start">
+                <img src="./img/tealogo.png" class="mr-3 h-7 sm:h-9" alt="">
+                <span class="self-center text-2xl text-[#006872] font-semibold whitespace-nowrap dark:text-white font-noto-700 ">金盆茶園</span>
             </a>
             <button id ="navbar-menu" data-collapse-toggle="navbar-panel" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-panel">
-                <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <div class="hidden w-full md:block md:w-auto space-x-1" id="navbar-panel">
+                <ul class="flex flex-col p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="./about_us.html" class="block py-2 pr-4 pl-3 text-xl text-right text-gray-600 font-semibold hover:bg-orange-100 rounded">關於我們</a>
+                    <a href="./about_us.html" class="block py-2 pr-4 pl-3 text-xl text-right text-[#006872] font-semibold rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wide duration-500 font-noto-300">關於我們</a>
                 </li>
                 <li>
-                    <a href="./products.html" class="block py-2 pr-4 pl-3 text-xl text-right text-gray-600 font-semibold hover:bg-orange-100 rounded">商品清單</a>
+                    <a href="./products.html" class="block py-2 pr-4 pl-3 text-xl text-right text-[#006872] font-semibold rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wide duration-500 font-noto-300">商品清單</a>
                 </li>
                 <li>
-                    <a href="./contacts.html" class="block py-2 pr-4 pl-3 text-xl text-right text-gray-600 font-semibold hover:bg-orange-100 rounded">聯絡我們</a>
+                    <a href="./contacts.html" class="block py-2 pr-4 pl-3 text-xl text-right text-[#006872] font-semibold rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wide duration-500 font-noto-300">聯絡我們</a>
                 </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Slick -->
-    <section class="pt-10">
-        <div class="container mx-auto w-3/4 sm:w-5/6">
-            <div class="slider">
-                <div class="slider-item algin-center">
-                    <img src="./img/tea-6069409_1280.jpeg" alt="" class="w-full aspect-[4/3] object-cover">
-                </div>
-                <div class="slider-item">
-                    <img src="./img/hill-5419527_1920.jpeg" alt="" class="w-full aspect-[4/3] object-cover">
-                </div>
-                <div class="slider-item">
-                    <img src="./img/green-tea-5301025_1280.jpeg" alt="" cclass="w-full aspect-[4/3] object-cover">
-                </div>
-                <div class="slider-item">
-                    <img src="./img/mountain.jpeg" alt="" cclass="w-full aspect-[4/3] object-cover">
-                </div>
-                <div class="slider-item">
-                    <img src="./img/book-2388213_1280.jpeg" alt="" cclass="w-full aspect-[4/3] object-cover">
+    <!-- 首頁 -->
+    <section class="pt-[96px] m-auto h-screen bg-cover bg-center bg-[url('./img/tea-g311cc89b4_1920.jpg')]">
+        <div class="container flex flex-wrap">
+            <div class="w-full sm:w-1/2 mt-auto ">
+                <div class="absolute bottom-3 left-3 md:bottom-[150px] md:left-[100px] bg-[#789395]/50 w-[80%] md:w-[600px] h-fit p-8 text-left backdrop-blur rounded-xl transition ease-in-out hover:-translate-y-1  duration-500">
+                    <h2 class="font-noto-700 text-5xl text-[#334647]">好茶。好心情。</h1>
+                        <p class="pt-5 text-md text-[#CCDFE0] font-noto-400">觀音，竟落入凡間，成為品茗的符碼，這應該是寰宇大地時空交錯中，一段溫柔的情事。</p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Slick -->
+    <section class="pt-10 w-full">
+        <div class="container w-full m-auto">
+            <div class="slider">
+                <div class="slider-item">
+                    <img src="./img/tea-6069409_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="./img/hill-5419527_1920.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="./img/green-tea-5301025_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="./img/tea-time-g3931b6d59_1920.jpg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="./img/book-2388213_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
     <!-- Gallery -->
     <section class="pt-10 mx-auto w-full">
-        <h1 class="text-center text-3xl font-bold">Gallery</h1>
+        <h1 class="text-center text-3xl font-bold">商品目錄</h1>
         <div class="pt-5 container flex flex-wrap mx-auto w-full">
             <div class="sm:w-full md:w-1/2 pt-4 px-1">
                 <img src="./img/product/blacktea.jpg" alt="" class="w-full aspect-square object-cover">
@@ -101,11 +155,13 @@
     <!-- Viedo -->
     <section class="pt-10 mx-auto">
         <h1 class="text-center text-3xl font-bold">採訪影片</h1>
-        <div class="container flex flex-wrap w-full mx-auto algin-center pt-10">
-            <a href="https://youtu.be/DgeyZaygAVU?t=362" target="_blank">
+        <div class="mt-5 container border-2 border-lime-600 rounded border-dashed w-full md:w-[80%] mx-auto relative">
+            <a href="https://youtu.be/DgeyZaygAVU?t=362" target="_blank" class="w-full object-fit">
                 <img src="./img/thumbnail_1280X720.jpeg" class="w-full px-4 aspect-video object-cover" alt="">
+                    <div class="absolute m-auto inset-0 z-[2] w-fit h-fit">
+                        <i class="fa-regular fa-circle-play fa-4x"></i>
+                    </div>
             </a>
-
         </div>
     </section>
 
@@ -145,8 +201,8 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="p-5 bg-orange-100/25 rounded-lg shadow md:flex md:items-center md:justify-center md:p-6 dark:bg-gray-800">
-        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2022 
+    <footer class="p-5 bg-[#B4CFB0] rounded-lg shadow md:flex md:items-center md:justify-center md:p-6 dark:bg-gray-800">
+        <span class="text-sm text-[#06872] text-center dark:text-gray-400">© 2022 
             <a href="#" class="hover:underline">TeaGoldBasin</a>. All Rights Reserved.
         </span>
     </footer>
@@ -158,9 +214,10 @@
                 dots: true,
                 autoplay: true,
                 arrows: true,
-                autoplayspeed: 2000,
-                speed: 2000
-
+                autoplayspeed: 1500,
+                speed: 1500,
+                cssEase: 'linear',
+                
             })
          })
     </script>
