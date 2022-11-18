@@ -22,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- ASO -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         .slick-next {
             right: 20px;
@@ -72,11 +75,11 @@
 </head>
 <body>
      <!-- 選單 -->
-    <nav class="bg-[#E5E3C9] border-gray-200 px-2 sm:px-4 py-2.5 shadow-md rounded fixed w-full z-[999]">
+    <nav class="bg-[#E5E3C9]/80 border-gray-200 px-2 sm:px-4 py-2.5 shadow-md rounded fixed w-full z-[999]">
         <div class="container flex flex-wrap w-3/4 sm:w-5/6 justify-between items-center mx-auto">
             <a href="./index.html" class="flex items-center justify-start">
-                <img src="./img/tealogo.png" class="mr-3 h-7 sm:h-9" alt="">
-                <span class="self-center text-2xl text-[#006872] font-semibold whitespace-nowrap dark:text-white font-noto-700 ">金盆茶園</span>
+                <img src="./img/tealogo.png" class="aspect-square mr-3 h-7 sm:h-9 hover:w-[36px] hover:h-[36px] hover:opacity-75" alt="">
+                <span class="self-center text-3xl text-[#006872] font-semibold whitespace-nowrap dark:text-white tracking-wider font-noto-700 ">金盆茶園</span>
             </a>
             <button id ="navbar-menu" data-collapse-toggle="navbar-panel" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
@@ -85,13 +88,13 @@
             <div class="hidden w-full md:block md:w-auto space-x-1" id="navbar-panel">
                 <ul class="flex flex-col p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="./about_us.html" class="block py-2 pr-4 pl-3 text-xl text-right text-[#006872] font-semibold rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wide duration-500 font-noto-300">關於我們</a>
+                    <a href="./about_us.html" class="block py-2 pr-4 pl-3 text-2xl text-right text-[#006872] font-semibold tracking-wide rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wider duration-500 font-noto-300">關於我們</a>
                 </li>
                 <li>
-                    <a href="./products.html" class="block py-2 pr-4 pl-3 text-xl text-right text-[#006872] font-semibold rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wide duration-500 font-noto-300">商品清單</a>
+                    <a href="./products.html" class="block py-2 pr-4 pl-3 text-2xl text-right text-[#006872] font-semibold tracking-wide rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wider duration-500 font-noto-300">商品清單</a>
                 </li>
                 <li>
-                    <a href="./contacts.html" class="block py-2 pr-4 pl-3 text-xl text-right text-[#006872] font-semibold rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wide duration-500 font-noto-300">聯絡我們</a>
+                    <a href="./contacts.html" class="block py-2 pr-4 pl-3 text-2xl text-right text-[#006872] font-semibold tracking-wide rounded hover:bg-[#94B49F] hover:shadow-md hover:rounded-xl hover:tracking-wider duration-500 font-noto-300">聯絡我們</a>
                 </li>
                 </ul>
             </div>
@@ -113,19 +116,19 @@
         <div class="container w-full m-auto">
             <div class="slider">
                 <div class="slider-item">
-                    <img src="./img/tea-6069409_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                    <img src="./img/tea-6069409_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
                 <div class="slider-item">
-                    <img src="./img/hill-5419527_1920.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                    <img src="./img/hill-5419527_1920.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
                 <div class="slider-item">
-                    <img src="./img/green-tea-5301025_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                    <img src="./img/green-tea-5301025_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
                 <div class="slider-item">
-                    <img src="./img/tea-time-g3931b6d59_1920.jpg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                    <img src="./img/tea-time-g3931b6d59_1920.jpg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
                 <div class="slider-item">
-                    <img src="./img/book-2388213_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover">
+                    <img src="./img/book-2388213_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
             </div>
         </div>
@@ -133,7 +136,7 @@
     </section>
     <!-- Gallery -->
     <section class="pt-10 mx-auto w-full">
-        <h1 class="text-center text-3xl font-bold">商品目錄</h1>
+        <h1 class="text-center text-3xl font-bold font-semibold font-noto-400 text-[#006872]  tracking-wide">商品目錄</h1>
         <div class="pt-5 container flex flex-wrap mx-auto w-full">
             <div class="sm:w-full md:w-1/2 pt-4 px-2">
                 <img src="./img/product/blacktea.jpg" alt="" class="w-full aspect-square object-cover rounded">
@@ -220,6 +223,7 @@
                 
             })
          })
+         AOS.init();
     </script>
       
 </body>
