@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>金盆茶園</title>
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite -->
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <!-- JQuery -->
@@ -79,7 +79,7 @@
                     <img src="./img/tea-6069409_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
                 <div class="slider-item">
-                    <img src="./img/hill-5419527_1920.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
+                    <img src="./img/tea-plantation-7344887_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
                 </div>
                 <div class="slider-item">
                     <img src="./img/green-tea-5301025_1280.jpeg" alt="" class="w-full sm:aspect-[4/3] object-cover opacity-80">
@@ -98,19 +98,19 @@
     <section class="pt-10 mx-auto w-full">
         <h1 class="text-center text-3xl font-bold font-semibold font-noto-400 text-[#006872] tracking-wide">商品目錄</h1>
         <div class="pt-5 container flex flex-wrap mx-auto w-full">
-            <div class="sm:w-full md:w-1/2 pt-4 px-2">
-                <img src="./img/product/blacktea.jpg" alt="" class="w-full aspect-square object-cover rounded">
+            <div class="sm:w-full md:w-1/2 pt-4 px-2 hover:-translate-y-1 hover:bg-orange-50/75 hover:shadow-lg">
+                <img src="./img/product/blacktea.jpg" alt="" class="w-fit h-fit aspect-square object-cover rounded opacity-90">
             </div>
-            <div class="sm:w-full md:w-1/2 pt-4 px-2">
-                <img src="./img/product/can.jpg" alt="" class="w-full aspect-square object-cover rounded">
+            <div class="sm:w-full md:w-1/2 pt-4 px-2 hover:-translate-y-1 hover:bg-orange-50/75 hover:shadow-lg">
+                <img src="./img/product/can.jpg" alt="" class="w-fit h-fit aspect-square object-cover rounded opacity-90">
             </div>
         </div>
         <div class="container flex flex-wrap mx-auto">
-            <div class="sm:w-full md:w-1/2 pt-4 px-2">
-                <img src="./img/product/oolong.jpg" alt="" class="w-full aspect-square object-cover rounded">
+            <div class="sm:w-full md:w-1/2 pt-4 px-2 hover:-translate-y-1 hover:bg-orange-50/75 hover:shadow-lg">
+                <img src="./img/product/oolong.jpg" alt="" class="w-fit h-fit aspect-square object-cover rounded opacity-90">
             </div>
-            <div class="sm:w-full md:w-1/2 pt-4 px-2">
-                <img src="./img/product/can2.jpg" alt="" class="w-full aspect-square object-cover rounded">
+            <div class="sm:w-full md:w-1/2 pt-4 px-2 hover:-translate-y-1 hover:bg-orange-50/75 hover:shadow-lg">
+                <img src="./img/product/can2.jpg" alt="" class="w-fit h-fit aspect-square object-cover rounded opacity-90">
             </div>
         </div>
     </section>
@@ -118,9 +118,9 @@
     <!-- Viedo -->
     <section class="pt-10 mx-auto">
         <h1 class="text-center text-3xl font-bold font-semibold font-noto-400 text-[#006872] tracking-wide">採訪影片</h1>
-        <div class="mt-5 container border-2 border-lime-600 rounded border-dashed w-full md:w-[80%] mx-auto relative">
+        <div class="mt-5 container border-2 border-[#E5E3C9] rounded border-dashed w-full md:w-[80%] mx-auto relative hover:-translate-y-1 hover:bg-orange-50/75 hover:shadow-lg">
             <a href="https://youtu.be/DgeyZaygAVU?t=362" target="_blank" class="w-full object-fit">
-                <img src="./img/thumbnail_1280X720.jpeg" class="w-full px-4 aspect-video object-cover" alt="">
+                <img src="./img/thumbnail_1280X720.jpeg" class="w-fit h-fit px-4 aspect-video object-cover rounded-xl opacity-90" alt="">
                     <div class="absolute m-auto inset-0 z-[2] w-fit h-fit">
                         <i class="fa-regular fa-circle-play fa-4x"></i>
                     </div>
@@ -135,9 +135,11 @@
                 <img src="./img/follow-us.png" class="w-fit h-fit m-auto sm:float-right sm:mr-10 pr-10  pb-5 sm:pb-1 rounded" alt="">
             </div>
             <div class="w-full sm:w-1/2 h-fit mx-auto">
+                <a href="contacts.html">
                 <h2 class="text-3xl font-bold mx-auto text-center sm:text-left">
                     聯絡我們 !
                 </h2>
+                </a>
             </div>
         </div>
         <div class="container mx-auto w-full">
@@ -172,8 +174,8 @@
                 dots: true,
                 autoplay: true,
                 arrows: true,
-                autoplayspeed: 1500,
-                speed: 1500,
+                autoplayspeed: 1000,
+                speed: 1000,
                 cssEase: 'linear',
                 
             })
